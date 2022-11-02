@@ -16,11 +16,14 @@ function GetInfo(){
     cityList.innerHTML = "--"+cityName.value+"--"
 }
 
-fetch("https://api.openweathermap.org/data/2.5/forecast?q='+cityName.value+'&appid=223570223a859abd2a47ee0f27ed73e1")
+fetch("https://api.openweathermap.org/data/2.5/forecast?q=" +cityName.value+ "&appid=223570223a859abd2a47ee0f27ed73e1")
 .then(response => response.json())
 .then(data =>{
     for (i=0;i<5;i++){
-        document.getElementById("current-city" +(i+1)+"Temperature").innerHTML = "Temperature:" + Number(data.list[i].main.temp -302.79).toFixed(1)+"°";
+        document.getElementById("current-city" +(i+1)+"temperature").innerHTML = "temperature:" + Number(data.list[i].main.temp -302.79).toFixed(1)+"°";
+    }
+    for (i=0;i<5;i++){
+        document.getElementById("current-city" +(i+1)+"humidity").innerHTML = "humidity:" + Number(data.list[i].main.humidity -73).toFixed(1)+"°";
     }
 })
 
