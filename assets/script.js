@@ -1,119 +1,26 @@
-const APIKey = "090c01416bd9fb914720dfa9cb80f458";
+// const APIKey = "090c01416bd9fb914720dfa9cb80f458";
 
-var city;
+// var city;
 
-var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
-
-
-
-
-
-fetch(queryURL)
+// var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
 
 
 
 
 
-// var userFormEl = document.querySelector('#user-form');
-// var cityButtonsEl = document.querySelector('#city-buttons');
-// var nameInputEl = document.querySelector('#username');
-// var cityContainerEl = document.querySelector('#city-container');
-// var citySearchTerm = document.querySelector('#city-term');
+// fetch(queryURL)
 
-// var formSubmitHandler = function (event) {
-//   event.preventDefault();
+function GetInfo(){
+    const cityName = document.getElementById("search-city");
+    const cityList = document.getElementById("city-list");
+    cityList.innerHTML = "--"+cityName.value+"--"
+}
 
-//   var username = nameInputEl.value.trim();
-
-//   if (username) {
-//     getUserRepos(username);
-
-//     cityContainerEl.textContent = '';
-//     nameInputEl.value = '';
-//   } else {
-//     alert('Please enter a GitHub username');
-//   }
-// };
-
-// var buttonClickHandler = function (event) {
-//   var language = event.target.getAttribute('data-city');
-
-//   if (city) {
-//     getFeaturedRepos(city);
-
-//     cityContainerEl.textContent = '';
-//   }
-// };
-
-// var getUserRepos = function (user) {
-//   var apiUrl = 'https://api.github.com/users/' + user + '/repos';
-
-//   fetch(apiUrl)
-//     .then(function (response) {
-//       if (response.ok) {
-//         response.json().then(function (data) {
-//           displayRepos(data, user);
-//         });
-//       } else {
-//         alert('Error: ' + response.statusText);
-//       }
-//     })
-//     .catch(function (error) {
-//       alert('Unable to connect to GitHub');
-//     });
-// };
-
-// var getFeaturedRepos = function (city) {
-//   var apiUrl = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
-
-//   fetch(apiUrl).then(function (response) {
-//     if (response.ok) {
-//       response.json().then(function (data) {
-//         displayRepos(data.items, language);
-//       });
-//     } else {
-//       alert('Error: ' + response.statusText);
-//     }
-//   });
-// };
-
-// var displayRepos = function (city, cityTerm) {
-//   if (repos.length === 0) {
-//     cityContainerEl.textContent = 'No repositories found.';
-//     return;
-//   }
-
-//   citySearchTerm.textContent = cityTerm;
-
-//   for (var i = 0; i < city.length; i++) {
-//     var repoName = city[i].owner.login + '/' + city[i].name;
-
-//     var repoEl = document.createElement('div');
-//     repoEl.classList = 'list-item flex-row justify-space-between align-center';
-
-//     var titleEl = document.createElement('span');
-//     titleEl.textContent = repoName;
-
-//     repoEl.appendChild(titleEl);
-
-//     var statusEl = document.createElement('span');
-//     statusEl.classList = 'flex-row align-center';
-
-//     if (city[i].open_issues_count > 0) {
-//       statusEl.innerHTML =
-//         "<i class='fas fa-times status-icon icon-danger'></i>" + repos[i].open_issues_count + ' issue(s)';
-//     } else {
-//       statusEl.innerHTML = "<i class='fas fa-check-square status-icon icon-success'></i>";
-//     }
-
-//     repoEl.appendChild(statusEl);
-
-//     cityContainerEl.appendChild(repoEl);
-//   }
-// };
-
-// userFormEl.addEventListener('submit', formSubmitHandler);
-// cityButtonsEl.addEventListener('click', buttonClickHandler);
-
-
+fetch("https://api.openweathermap.org/data/2.5/forecast?q='+cityName.value+'&appid=223570223a859abd2a47ee0f27ed73e1")
+.then(response => response.json())
+.then(data =>{
+    for (i=0;i<5;i++){
+        document.getElementById("current-city" +(i+1)+"Temperature").innerHTML = "Temperature:" + Number(data.list[i].main.temp -302.79).toFixed(1)+"°";
+    }
+})
 

@@ -23,12 +23,12 @@
                     <input type="text" class="form-control"id="search-city" aria-label="City Search" aria-describedby="search-button">   
                 </div>
                 <button class=" btn " type="button" id="Search">Search</button>
-                <ul class="list-group">
+                <ul class="list-group" id="city-list">
 
                 </ul>
             </div>   
             <div class="col-sm-8">
-                <div class="row ml-2 border border-dark rounded">
+                <div class="row ml-3 border border-dark rounded">
                     <div class="col-sm-12" id="current-weather">
                         <h3 class="city-name mb-1 mt-2 bolder" id="current-city"></h3>
                         <p>Temperature:<span class="current" id="temperature"></span></p>
@@ -38,7 +38,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12" id ="future-weather">
+            <div class="col-sm-12 " id ="future-weather">
                 <h3>5-Day Forecast:</h3>
                 <div class="row text-light">
                     <div class="col-sm-2 bg-secondary forecast  ml-5 mb-3 p-2 mt-5 rounded" >
