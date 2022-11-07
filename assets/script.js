@@ -41,6 +41,17 @@ fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city.value}&limit=5&appi
    var dataTemp = fiveDaysForecast[0].main.temp
    var currentTemp = document.getElementById('temperature')
    currentTemp.textContent = ' ' + Math.round(dataTemp -273.15) + 'C'
+
+   var dataHumidity = fiveDaysForecast[0].main.humidity
+   var currentHumidity = document.getElementById('humidity')
+   currentHumidity.textContent = ' ' +dataHumidity + '%'
+
+
+   var dataWind = fiveDaysForecast[0].wind.speed
+   var currentWind = document.getElementById('wind-speed')
+   currentWind.textContent = ' ' +dataWind 
+
+
 });
 })
 })
