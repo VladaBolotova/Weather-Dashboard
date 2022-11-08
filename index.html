@@ -12,7 +12,7 @@
 <body>
     
     <div class="jumbotron container-fluid mt-2 text-center p-2" style="background-color:#404040 ;color: white;">
-        <h1> <strong>Weather Dashboard</strong></h1>
+        <h1> Weather Dashboard</h1>
     </div>
     
     <div class="container">
@@ -22,17 +22,15 @@
                 <h4 class="pt-1"><strong>Search for a City:</strong></h4>
                 
                 <form id="city-name">
-                    <input type="text" class="form-control" id="search-city" name="search-city" aria-label="City Search" aria-describedby="search-button">   
+                    <input type="text" class="form-control" id="search-city" name="search-city" >   
                     <button class=" btn " type="button" id="Search">Search</button>
                 
                 </form>
-                
-                <ul class="list-group" id="city-list"> </ul>
 
             </div>   
         <div id="main" class="col-sm-8">
             <div>
-                <div class="row ml-3 border border-dark rounded">
+                <div class="row ml-3 border border-dark ">
                     <div class="col-sm-12" id="current-weather">
                         <h3 class="city-name mb-1 mt-2 bolder" id="current-city"></h3>
                         <p>Temperature:<span class="current" id="temperature"></span></p>
@@ -49,35 +47,35 @@
             <div  id ="future-weather">
                 <h3>5-Day Forecast:</h3>
                 <div class="row text-light">
-                    <div class="col-sm-2 bg-secondary forecast  ml-5 mb-3 p-2 mt-5 rounded" >
+                    <div class="col-sm-2 bg-secondary forecast  ml-5 mb-3 p-2 mt-5 " >
                         <p id="fDate0"></p>
                         <p id="fImg0"></p>
                         <p>Temp:<span id="fTemp0"></span></p>
                         <p>Humidity:<span id="fHumidity0"></span></p>
                         <p>Wind Speed:<span id="fWindSpeed0"></span></p>
                     </div>
-                    <div class="col-sm-2 bg-secondary forecast text-white ml-2 mb-3 p-2 mt-5 rounded" >
+                    <div class="col-sm-2 bg-secondary forecast text-white ml-2 mb-3 p-2 mt-5 " >
                         <p id="fDate1"></p>
                         <p id="fImg1"></p>
                         <p>Temp:<span id="fTemp1"></span></p>
                         <p>Humidity:<span id="fHumidity1"></span></p>
                         <p>Wind Speed:<span id="fWindSpeed1"></span></p>
                     </div>
-                    <div class="col-sm-2 bg-secondary forecast text-white ml-2 mb-3 p-2 mt-5 rounded">
+                    <div class="col-sm-2 bg-secondary forecast text-white ml-2 mb-3 p-2 mt-5 ">
                         <p id="fDate2"></p>
                         <p id="fImg2"></p>
                         <p>Temp:<span id="fTemp2"></span></p>
                         <p>Humidity:<span id="fHumidity2"></span></p>
                         <p>Wind Speed:<span id="fWindSpeed2"></span></p>
                     </div>
-                    <div class="col-sm-2 bg-secondary forecast text-white ml-2 mb-3 p-2 mt-5 rounded">
+                    <div class="col-sm-2 bg-secondary forecast text-white ml-2 mb-3 p-2 mt-5 ">
                         <p id="fDate3"></p>
                         <p id="fImg3"></p>
                         <p>Temp:<span id="fTemp3"></span></p>
                         <p>Humidity:<span id="fHumidity3"></span></p>
                         <p>Wind Speed:<span id="fWindSpeed3"></span></p>
                     </div>
-                    <div class="col-sm-2 bg-secondary forecast text-white ml-2 mb-3 p-2 mt-5 rounded" >
+                    <div class="col-sm-2 bg-secondary forecast text-white ml-2 mb-3 p-2 mt-5 " >
                         <p id="fDate4"></p>
                         <p id="fImg4"></p>
                         <p>Temp:<span id="fTemp4"></span></p>

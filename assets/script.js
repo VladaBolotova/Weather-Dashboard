@@ -64,9 +64,6 @@ var fiveDaysForecast=get5DaysForecast(data);
    var currentWind = document.getElementById('wind-speed')
    currentWind.textContent = ' ' +dataWind 
 
-//    var data1Humidity = fiveDaysForecast[1].main.humidity
-//    var firstDayHumidity = document.getElementById('fHumidity0')
-//    firstDayHumidity.textContent = ' ' +data1Humidity + '%'
 
       
 for (i=0;i<5;i++){
@@ -74,13 +71,13 @@ for (i=0;i<5;i++){
     var iconcode= data.list[((i+1)*8)-1].weather[0].icon;
     var iconurl="https://openweathermap.org/img/wn/"+iconcode+".png";
     var tempK= data.list[((i+1)*8)-1].main.temp;
-    var tempF=(((tempK-273.5)*1.80)+32).toFixed(2);
+    var tempC=Math.round(tempK-273.15)
     var humidity= data.list[((i+1)*8)-1].main.humidity;
     var windS = data.list[((i+1)*8)-1].wind.speed;
 
     $("#fDate"+i).html(date);
     $("#fImg"+i).html("<img src="+iconurl+">");
-    $("#fTemp"+i).html(tempF+"&#8457");
+    $("#fTemp"+i).html(tempC+"C");
     $("#fHumidity"+i).html(humidity+"%");
     $("#fWindSpeed"+i).html(windS);
 
