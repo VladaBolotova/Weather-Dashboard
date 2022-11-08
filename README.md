@@ -11,3 +11,11 @@ The page presents a weather dashboard with form input. When users searchs for a 
 
 Credits N/A
 
+Deployed page:
+
+https://vladabolotova.github.io/Weather-Dashboard/?search-city=New+York
+
+
+<img width="1440" alt="Screen Shot 2022-11-07 at 9 37 11 PM" src="https://user-images.githubusercontent.com/111080921/200463997-05e1c522-3272-455b-a6ef-54aedb59253e.png">
+
+<img width="1440" alt="Screen Shot 2022-11-07 at 9 39 50 PM" src="https://user-images.githubusercontent.com/111080921/200464035-96645f5c-2f55-4719-833e-a807554eb440.png">
