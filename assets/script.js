@@ -30,7 +30,7 @@ button.addEventListener("click",function(){
  
 
  
-fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city.value}&limit=1&appid=${APIKey}`).then(function(response){
+fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city.value}&limit=1&appid=${APIKey}`).then(function(response){
     return response.json();
 }).then(function(cityInfo){
     var lab=cityInfo[0].lat
